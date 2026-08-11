@@ -1,11 +1,11 @@
-# 灵信演示项目
+# 高俊杰家教
 
-本仓库包含类似微信的即时通讯 Web 应用演示。
-
-进入目录后启动：
+本仓库现包含家教宣传落地页（`jiajiao/`）。
 
 ```bash
-cd lingxin
+cd jiajiao
 npm install
 npm run dev
 ```
+
+历史演示项目仍保留在 `lingxin/` 目录。
