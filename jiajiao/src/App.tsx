@@ -1,5 +1,5 @@
-import { useState, type ReactNode } from 'react'
-import { motion, useReducedMotion } from 'framer-motion'
+import { useEffect, useState, type ReactNode } from 'react'
+import { motion, useReducedMotion, useScroll, useMotionValueEvent } from 'framer-motion'
 import portrait from './assets/gao-junjie.jpg'
 import './index.css'
 
@@ -105,6 +105,16 @@ async function copyText(text: string) {
 export default function App() {
   const reduce = useReducedMotion()
   const [copied, setCopied] = useState<string | null>(null)
+  const [navSolid, setNavSolid] = useState(false)
+  const { scrollY } = useScroll()
+
+  useMotionValueEvent(scrollY, 'change', (value) => {
+    setNavSolid(value > window.innerHeight * 0.72)
+  })
+
+  useEffect(() => {
+    setNavSolid(window.scrollY > window.innerHeight * 0.72)
+  }, [])
 
   const handleCopy = async (value: string) => {
     const ok = await copyText(value)
@@ -116,7 +126,7 @@ export default function App() {
 
   return (
     <div className="page">
-      <header className="nav">
+      <header className={`nav${navSolid ? ' nav-solid' : ''}`}>
         <a className="nav-brand" href="#top">
           高俊杰家教
         </a>
