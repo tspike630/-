@@ -103,6 +103,27 @@ button {
   border-color: rgba(238, 243, 247, 0.7);
 }
 
+.nav-solid {
+  background: rgba(238, 243, 247, 0.88);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--line);
+}
+
+.nav-solid .nav-brand {
+  color: var(--ink);
+}
+
+.nav-solid .nav-cta {
+  color: var(--ink);
+  border-color: rgba(14, 28, 47, 0.22);
+  background: rgba(255, 255, 255, 0.55);
+}
+
+.nav-solid .nav-cta:hover {
+  background: var(--teal-soft);
+  border-color: var(--teal);
+}
+
 .hero {
   position: relative;
   min-height: 100svh;
@@ -497,6 +518,7 @@ button {
     url('./assets/study-atmosphere.svg') center / cover no-repeat,
     #0e1c2f;
   color: #eef3f7;
+  padding-bottom: clamp(5rem, 12vw, 8rem);
 }
 
 .contact .eyebrow {
