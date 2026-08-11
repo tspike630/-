@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#1a3a4e"/>
+      <stop offset="55%" stop-color="#102536"/>
+      <stop offset="100%" stop-color="#0c1c28"/>
+    </linearGradient>
+    <radialGradient id="lamp" cx="72%" cy="28%" r="35%">
+      <stop offset="0%" stop-color="#c9a45c" stop-opacity="0.45"/>
+      <stop offset="45%" stop-color="#1f6b63" stop-opacity="0.2"/>
+      <stop offset="100%" stop-color="#0c1c28" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="1600" height="900" fill="url(#sky)"/>
+  <rect width="1600" height="900" fill="url(#lamp)"/>
+  <g opacity="0.22" stroke="#d7ebe7" stroke-width="1.5" fill="none">
+    <path d="M120 720h420"/>
+    <path d="M160 700v40M220 690v50M290 705v35M360 685v55M430 700v40"/>
+    <rect x="980" y="560" width="380" height="220" rx="4"/>
+    <path d="M1020 620h300M1020 660h260M1020 700h220"/>
+    <circle cx="1180" cy="420" r="70"/>
+    <path d="M1180 350v-40M1110 420h-40M1250 420h40M1130 370l-28-28M1230 370l28-28"/>
+  </g>
+</svg>

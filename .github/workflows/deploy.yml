@@ -2,7 +2,7 @@ name: Deploy to GitHub Pages
 
 on:
   push:
-    branches: ['main', 'cursor/lingxin-wechat-clone-e9d1'] # 触发部署的分支
+    branches: ['main']
 
 permissions:
   contents: read
@@ -28,15 +28,15 @@ jobs:
         with:
           node-version: 20
           cache: 'npm'
-          cache-dependency-path: lingxin/package-lock.json
+          cache-dependency-path: jiajiao/package-lock.json
 
       - name: Install dependencies
         run: npm ci
-        working-directory: ./lingxin
+        working-directory: ./jiajiao
 
       - name: Build
         run: npm run build
-        working-directory: ./lingxin
+        working-directory: ./jiajiao
 
       - name: Setup Pages
         uses: actions/configure-pages@v4
@@ -44,7 +44,7 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: './lingxin/dist'
+          path: './jiajiao/dist'
 
       - name: Deploy to GitHub Pages
         id: deployment
